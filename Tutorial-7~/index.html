@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>VueJS Tutorial</title>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <link href="styles.css" rel = 'stylesheet' />
+    </head>
+    <body>
+        <div id = "vue-app">
+            <h1>Keyboard Events</h1>
+            <label>Name</label>
+            <input type="text" v-on:keyup.enter="logName" />
+            <label>Age:</label>
+            <input type="text" v-on:keyup.alt.enter="logAge" />
+            <!-- .alt-> 키 수식어  -->
+            <!-- 키를 누르고 엔터를 눌러야 함수가 사용된다. -->
+            <!-- https://ux.stories.pe.kr/119 -->
+        </div>
+
+        <script src="app.js"></script>
+    </body>
+</html>

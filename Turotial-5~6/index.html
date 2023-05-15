@@ -12,12 +12,21 @@
             <button v-on:click="add(1)">Add a year</button>
             <!-- 버튼 데이터 바인딩 이벤트 
             v-on은 @로 줄여쓸 수 있다.-->
+            <button v-on:click.once="add(1)">Add a year</button>
+            <!-- Event Modifier -->
+            <!-- .stop, .prevent, .self, .capture, .once, .passive -->
+            <!-- .once -> 이벤트 한번만 실행 -->
+            <!-- .stop -> event bubling을 막아 부모 태크 event 실행 막음 -->
+            <!-- .capture -> 자식 태그를 클릭해도 부모 태그 우선 실행 -->
+            <!-- .self -> 자식 영역 제외된 부모 태크에서만 이벤트 동작 -->
+            <!-- .passive -> 이벤트와 로직 처리를 분리하여 사용자 측면에서 부드러운 컨트롤 가능 -->
             <button v-on:click="subtract(1)">Subtract a Year</button>
 
             <button v-on:dblclick="add(10)">Add 10 years</button>
             <button v-on:dblclick="subtract(10)">Subtract 10 Years</button>
             <p>My age is {{ age }}</p>
             <div id="canvas"v-on:mousemove="updateXY">{{ x }}, {{ y }}</div>
+            <a v-on:click="click" href="www.naver.com">Naver</a>
         <script src="app.js"></script>
         </div>
     </body>
