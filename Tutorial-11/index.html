@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>VueJS Tutorial</title>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <link href="styles.css" rel = 'stylesheet' />
+    </head>
+    <body>
+        <div id = "vue-app">
+            <h1>Conditionals</h1>
+            <button v-on:click="error = !error">Toggle Error</button>
+            <button v-on:click="success= !success">Toggle Success</button>
+            <!-- <p v-if="error">There has been error.</p> 
+            <p v-else-if="success">success.</p> -->
+            <!-- not show -->
+            <p v-show="error">There has been error.</p>
+            <p v-show="success">sucsess.</p>
+            <!--  style을 주느냐 아니냐 차이-->
+        </div>
+        <script src="app.js"></script>
+    </body>
+</html>
