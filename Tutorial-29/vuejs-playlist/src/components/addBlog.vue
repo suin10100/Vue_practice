@@ -66,6 +66,7 @@
     methods: {
       post: function(){
         this.$http.post('http://jsonplaceholder.typicode.com/posts', {
+          // http request 이용
           title: this.blog.title,
           body: this.blog.content,
           userId: 1
