@@ -20,7 +20,7 @@ export default {
         }
     },
     created() {
-        this.$http.get('http://jsonplaceholder.typicode.com/posts').then(function(data){
+        this.$http.get('https://vuejs-practice-7bdb9-default-rtdb.firebaseio.com/posts.json').then(function(data){
             this.blogs = data.body.slice(0, 10);
         });
     },

@@ -36,9 +36,9 @@
             <p>Blog content:</p>
             <p>{{ blog.content }}</p>
             <p>Blog categories:</p>
-            <ui>
+            <!-- <ui> -->
                 <li v-for="category in blog.categories">{{ category }}</li>
-            </ui>
+            <!-- </ui> -->
             <p>Author: {{ blog.author }}</p>
         </div>
       </div>
@@ -65,12 +65,7 @@
     },
     methods: {
       post: function(){
-        this.$http.post('http://jsonplaceholder.typicode.com/posts', {
-          // http request 이용
-          title: this.blog.title,
-          body: this.blog.content,
-          userId: 1
-        }).then(function(data){
+        this.$http.post('https://vuejs-practice-7bdb9-default-rtdb.firebaseio.com/posts.json', this.blog).then(function(data){
           console.log(data);
           this.submitted = true;
         });
